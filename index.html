@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amyy Billing | Smart Billing System</title>
+<link rel="stylesheet" href="css/style.css"><script src="js/app.js" defer></script>
+</head><body>
+<header><a class="brand" href="index.html">A<span>Amyy Billing<small>SMART BILLING SYSTEM</small></span></a><nav><a href="#bill">New Invoice</a><a href="#history">Invoice History</a></nav></header>
+<main class="wrap">
+<section class="intro"><div><p class="eyebrow">BILLING WORKSPACE</p><h1>Create an invoice</h1><p class="muted">Add products and calculate the bill automatically.</p></div><span id="todayLabel" class="tag"></span></section>
+<section class="layout">
+<div class="panel" id="bill">
+<p class="eyebrow">STEP 01</p><h2>Product details</h2>
+<form id="productForm">
+<label>Product name<input id="productName" required maxlength="60" placeholder="Wireless Mouse"></label>
+<div class="fields"><label>Unit price (Rs.)<input id="productPrice" type="number" min=".01" step=".01" required placeholder="2500"></label><label>Quantity<input id="productQty" type="number" min="1" step="1" value="1" required></label></div>
+<label>Available stock<input id="productStock" type="number" min="1" step="1" value="10" required></label>
+<button class="primary" type="submit">＋ Add product to bill</button></form>
+<hr><p class="eyebrow">STEP 02</p><h2>Bill adjustments</h2>
+<div class="fields"><label>Discount (Rs.)<input id="discountInput" type="number" min="0" value="0" step=".01"></label><label>Tax rate (%)<input id="taxInput" type="number" min="0" max="100" value="5" step=".01"></label></div>
+<p class="muted tiny">Tax is calculated after discount.</p>
+<div class="actions"><button id="clearBillBtn" class="secondary" type="button">Clear bill</button><button id="printBtn" class="dark" type="button">Print invoice</button></div><p id="message" role="status"></p>
+</div>
+<div class="panel invoice" id="invoice">
+<div class="invoiceHead"><div><p class="eyebrow">STEP 03 · LIVE PREVIEW</p><h2>Invoice summary</h2></div><span class="icon">▤</span></div>
+<div class="meta"><div>Invoice number<strong id="invoiceNumber">—</strong></div><div>Invoice date<strong id="invoiceDate">—</strong></div></div>
+<div class="tableWrap"><table><thead><tr><th>Product</th><th>Price</th><th>Qty</th><th>Total</th><th class="no-print"></th></tr></thead><tbody id="invoiceItems"><tr><td colspan="5" class="empty">No products added yet.</td></tr></tbody></table></div>
+<div class="totals"><div><span>Subtotal</span><b id="subtotal">Rs. 0.00</b></div><div><span>Discount</span><b id="discountAmount">− Rs. 0.00</b></div><div><span>Tax</span><b id="taxAmount">Rs. 0.00</b></div><div class="grand"><span>Grand total</span><b id="grandTotal">Rs. 0.00</b></div></div><p class="thanks">Thank you for your purchase!</p>
+</div></section>
+<section class="panel history" id="history"><div class="historyHead"><div><p class="eyebrow">SAVED RECORDS</p><h2>Invoice history</h2></div><button id="clearHistoryBtn" class="secondary" type="button">Clear history</button></div><div id="historyList"><p class="empty">No saved invoices yet.</p></div></section>
+<footer>Web Technologies · Lab 5 · JavaScript Fundamentals</footer></main></body></html>

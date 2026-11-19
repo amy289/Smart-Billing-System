@@ -1,0 +1,15 @@
+# Lab 5 Checklist
+- [ ] index.html is at the project root
+- [ ] css/style.css exists and is linked
+- [ ] js/app.js exists and is linked
+- [ ] Add one product and verify totals
+- [ ] Add multiple products
+- [ ] Test stock/quantity validation
+- [ ] Test discount and tax
+- [ ] Remove a product
+- [ ] Print an invoice
+- [ ] Refresh and check saved invoice history
+- [ ] Test mobile layout
+- [ ] Take at least 3 screenshots
+- [ ] Complete Lab5_Report_Template.md
+- [ ] Make meaningful Git commits
